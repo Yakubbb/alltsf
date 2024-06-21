@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
+
+body {
+    font-family: "Audiowide", cursive;
+    background-color: #444444;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    margin-top: 20px;
+    max-width: calc(100vw - 40px);
+    justify-content: center;
+    align-items: center;
+}
+
+.game-tile {
+    width: 300px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.game-tile:hover {
+    transform: scale(1.05);
+}
+
+.game-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.game-info {
+    padding: 15px;
+}
+
+.game-title {
+    font-size: 18px;
+    margin: 0;
+    color: #ff0;
+}
+
+.game-data {
+    font-size: 14px;
+    margin-top: 5px;
+    color: #fff;
+}
+
+.download-btn {
+    display: inline-block;
+    text-align: center;
+    background-color: #ff0;
+    color: #000;
+    padding: 10px 20px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.download-btn:hover {
+    background-color: #e6e600;
+}

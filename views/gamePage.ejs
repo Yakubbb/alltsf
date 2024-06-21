@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Игровая страница</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #ff0;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 1rem;
+        }
+        main {
+            padding: 2rem;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>
+            <%= name %>
+                    <nav>
+                        <ul>
+                            <li><input type="button" onclick="history.back();" value="Назад"/></li>
+                        </ul>
+                    </nav>
+    </header>
+    <main>
+        <section id="game">
+            <h2>
+                <%= name %>
+            </h2>
+            <h3> Дата выхода: <%= year %>
+                    </h2>
+                    <div id="game-container">
+                    </div>
+        </section>
+        <section id="about">
+            <h2>О <%= name %>
+            </h2>
+            <p>
+                <%= discr %>
+            </p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Название Игры. Все права защищены.</p>
+    </footer>
+</body>
+
+</html>
