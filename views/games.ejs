@@ -4,11 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Каталог игр</title>
-    <link rel="stylesheet" href="styler.css">
+    <link rel="stylesheet" href="gameListStyle.css">
+    <script src="formScript.js"></script>
 </head>
 
-<body>
 
+<body>
+    <header style="height: 20px;">
+        <img style="width: 30px; height: 30px;" src="https://papik.pro/uploads/posts/2023-03/1677928317_papik-pro-p-dzhoistik-risunok-prostoi-1.png" alt="ААААААААААААААААААААААААА" id="headerImage">
+    </header>
     <div class="container" id="gamesContainer">
         <div class="game-tile">
             <img src="https://images.pexels.com/photos/194511/pexels-photo-194511.jpeg?cs=srgb&dl=pexels-lanophotography-194511.jpg&fm=jpg"
@@ -16,7 +20,7 @@
             <div class="game-info">
                 <p class="game-title">Add ur game</p>
                 <p class="game-data">just click on a button</p>
-                <button onclick="document.location='AddGame.html'">Добавить</button>
+                <button onclick="OpenAddingPage()">New game</button>
             </div>
         </div>
         <% games.forEach(function(game) { %>
@@ -26,14 +30,15 @@
                     <p class="game-title">
                         <%= game.title %>
                     </p>
-                    <p class="game-data">"<%= game.date %>"</p>
+                    <p class="game-data">
+                        <%= game.releaseDate %>
+                    </p>
                     <button
                         onclick="OpenGamePage('<%= game.title %>','<%= game.releaseDate %>','<%= game.discr %>','<%= game.imageUrl %>')">About</button>
                 </div>
             </div>
             <% }); %>
     </div>
-    <script src="formScript.js"></script>
 
 </body>
 

@@ -70,3 +70,32 @@ body {
 .download-btn:hover {
     background-color: #e6e600;
 }
+header {
+    background-color: #e6e600;
+    padding: 20px;
+    text-align: center;
+}
+
+footer {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+}
+
+#footerButton {
+    background-color:#ff0;
+    border: none;
+    border-radius: 10px;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#footerButton:hover {
+    background-color: #e6e600;
+}
