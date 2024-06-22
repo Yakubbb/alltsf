@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Каталог игр</title>
+    <link rel="stylesheet" href="styler.css">
+</head>
+
+<body>
+
+    <div class="container" id="gamesContainer">
+        <div class="game-tile">
+            <img src="https://images.pexels.com/photos/194511/pexels-photo-194511.jpeg?cs=srgb&dl=pexels-lanophotography-194511.jpg&fm=jpg"
+                alt="${game.title}" class="game-image">
+            <div class="game-info">
+                <p class="game-title">Add ur game</p>
+                <p class="game-data">just click on a button</p>
+                <button onclick="document.location='AddGame.html'">Добавить</button>
+            </div>
+        </div>
+        <% games.forEach(function(game) { %>
+            <div class="game-tile">
+                <img src="<%= game.imageUrl %>" alt="<%= game.name %>" class="game-image">
+                <div class="game-info">
+                    <p class="game-title">
+                        <%= game.title %>
+                    </p>
+                    <p class="game-data">"<%= game.date %>"</p>
+                    <button
+                        onclick="OpenGamePage('<%= game.title %>','<%= game.releaseDate %>','<%= game.discr %>','<%= game.imageUrl %>')">About</button>
+                </div>
+            </div>
+            <% }); %>
+    </div>
+    <script src="formScript.js"></script>
+
+</body>
+
+</html>

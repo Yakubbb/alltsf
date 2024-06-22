@@ -2,21 +2,25 @@
 <html lang="ru">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Игровая страница</title>
+    <title>About a game</title>
     <style>
+        @import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
+
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
+            color: aliceblue;
+            display: flex;
+            flex-direction: column;
+            font-family: "Audiowide", cursive;
+            background-color: #333;
         }
 
         header {
             background-color: #333;
             color: #ff0;
-            padding: 1rem 0;
+            padding: 0rem 0;
             text-align: center;
         }
 
@@ -33,15 +37,17 @@
             display: inline;
             margin: 0 1rem;
         }
+
         main {
             padding: 2rem;
         }
+
         footer {
             background-color: #333;
             color: #fff;
             text-align: center;
-            padding: 1rem 0;
-            position: fixed;
+            padding: 1rem;
+            position: relative;
             width: 100%;
             bottom: 0;
         }
@@ -52,32 +58,36 @@
     <header>
         <h1>
             <%= name %>
-                    <nav>
-                        <ul>
-                            <li><input type="button" onclick="history.back();" value="Назад"/></li>
-                        </ul>
-                    </nav>
+                <nav>
+                    <ul>
+                        <li><input type="button" onclick="history.back();" value="Back to main page" /></li>
+                    </ul>
+                </nav>
     </header>
-    <main>
-        <section id="game">
-            <h2>
-                <%= name %>
-            </h2>
-            <h3> Дата выхода: <%= year %>
-                    </h2>
-                    <div id="game-container">
-                    </div>
-        </section>
-        <section id="about">
-            <h2>О <%= name %>
-            </h2>
-            <p>
+    <main style="padding: 0;">
+        <div>
+            <section id="game">
+                <h2>
+                    <%= name %>
+                </h2>
+                <h3> Release date: <%= year %>
+                        </h2>
+                        <div id="game-container">
+                        </div>
+            </section>
+            <section id="about">
+                <div style="width: 30%;">
+                <img style="float:left; margin: 0px 7px 0px 0px; width:100%; height: 100%;" src="<%= image %>" alt="">
+                </div>
+                <h2 style="color: #ff0;">About <%= name %>
+                </h2>
                 <%= discr %>
-            </p>
-        </section>
+
+            </section>
+        </div>
     </main>
     <footer>
-        <p>&copy; 2024 Название Игры. Все права защищены.</p>
+        <p>&copy; 2024 <%= name %>. Andreev A Darokhin Y</p>
     </footer>
 </body>
 
