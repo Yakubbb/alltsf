@@ -17,7 +17,8 @@ app.get('/gamepage', (req, res) => {
     name: req.query.name,
     year: req.query.year,
     discr: req.query.discr,
-    image: req.query.photo
+    image: req.query.photo,
+    video:req.query.video
   });
 })
 app.get('/', (req, res) => {
@@ -38,7 +39,14 @@ app.get('/sendJson', (req, res) => {
   let date = req.query.year
   let discr = req.query.discr
   let image = req.query.photo
-  games.push({"title": name , "imageUrl": image , "releaseDate":date,"discr":discr})
+  let video = req.query.video
+  games.push({"title": name , "imageUrl": image , "releaseDate":date,"discr":discr,"video":video})
   fs.writeFile("gamesData.json", JSON.stringify(games), (err) => err && console.error(err));
   res.redirect("/")
+})
+app.get('/aboutUs',(req, res) => {
+  res.render('aboutUs')
+})
+app.get('/getGamesCount',(req, res) => {
+  res.render('aboutUs')
 })

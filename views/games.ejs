@@ -11,7 +11,9 @@
 
 <body>
     <header style="height: 20px;">
-        <img style="width: 30px; height: 30px;" src="https://papik.pro/uploads/posts/2023-03/1677928317_papik-pro-p-dzhoistik-risunok-prostoi-1.png" alt="ААААААААААААААААААААААААА" id="headerImage">
+        <img style="width: 30px; height: 30px;"
+            src="https://papik.pro/uploads/posts/2023-03/1677928317_papik-pro-p-dzhoistik-risunok-prostoi-1.png"
+            alt="ААААААААААААААААААААААААА" id="headerImage">
     </header>
     <div class="container" id="gamesContainer">
         <div class="game-tile">
@@ -23,23 +25,34 @@
                 <button onclick="OpenAddingPage()">New game</button>
             </div>
         </div>
-        <% games.forEach(function(game) { %>
-            <div class="game-tile">
-                <img src="<%= game.imageUrl %>" alt="<%= game.name %>" class="game-image">
-                <div class="game-info">
-                    <p class="game-title">
-                        <%= game.title %>
-                    </p>
-                    <p class="game-data">
-                        <%= game.releaseDate %>
-                    </p>
-                    <button
-                        onclick="OpenGamePage('<%= game.title %>','<%= game.releaseDate %>','<%= game.discr %>','<%= game.imageUrl %>')">About</button>
-                </div>
+        <div class="game-tile">
+            <img src="https://itg-soft.by/images/articles/2019/tehnicheskaya-podderzhka-sajta-v-minske/tehnicheskaya-podderzhka-sajta-v-minske-min.jpg"
+                alt="${game.title}" class="game-image">
+            <div class="game-info">
+                <p class="game-title">About us</p>
+                <p class="game-data">just click on a button</p>
+                <button onclick="OpenAboutUsPage()">Info</button>
             </div>
-            <% }); %>
-    </div>
-
+        </div>
+            <% games.forEach(function(game) { %>
+                <div class="game-tile">
+                    <img src="<%= game.imageUrl %>" alt="<%= game.name %>" class="game-image">
+                    <div class="game-info">
+                        <p class="game-title">
+                            <%= game.title %>
+                        </p>
+                        <p class="game-data">
+                            <%= game.releaseDate %>
+                        </p>
+                        <button
+                            onclick="OpenGamePage('<%= game.title %>','<%= game.releaseDate %>','<%= game.discr %>','<%= game.imageUrl %>','<%= game.video %>')">About</button>
+                    </div>
+                </div>
+                <% }); %>
+        </div>
+        <footer style="height: 20px;">
+            <p>Andreev Alex | Yakub Darokhin</p>
+        </footer>
 </body>
 
 </html>
